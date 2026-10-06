@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <title>SRRunner</title>
+    <script src="ruffle/ruffle.js"></script>
+    <style>
+        html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        }
+        #game-box ruffle-player {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="game-box" style="width: 100vw; height: 100vh;"></div>
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            const ruffle = window.RufflePlayer.newest();
+            const player = ruffle.createPlayer();
+            document.getElementById("game-box").appendChild(player);
+            player.load({
+                url: "stickrun.swf",
+                autoplay: 'on',
+                unmuteOverlay: 'hidden',
+                letterbox: 'off',
+                splashScreen: false,
+                //contextMenu: 'off',
+                allowScriptAccess: true,
+                //parameters: {
+                //    version: '0.0',
+                //}
+            });
+        });
+    </script>
+</body>
+</html>

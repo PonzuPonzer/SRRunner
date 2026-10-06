@@ -1,0 +1,5 @@
+*.swf
+/ruffle
+ponzu.json
+account.json
+save0.json
