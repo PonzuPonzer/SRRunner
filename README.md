@@ -9,3 +9,5 @@
 </p>
 
 # About this project
+
+A very simple Node.js server for Stick Run, allowing offline single player gameplay.
